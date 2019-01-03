@@ -1,7 +1,6 @@
 #include <iostream>
-#include "ostream_guard.h"
-#include "my_array.h"
-
+#include "ostream_guard.hh"
+//#include "my_array.hh"
 using namespace std;
 
 void print_hex(int i) {
