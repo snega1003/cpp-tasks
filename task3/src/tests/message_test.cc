@@ -1,6 +1,6 @@
 #include <gtest/gtest.h>
 #include <sstream>
-#include "message.h"
+#include "project/message.hh"
 
 TEST(Message, correctness)
 {
