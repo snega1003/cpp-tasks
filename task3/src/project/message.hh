@@ -1,5 +1,4 @@
 namespace mess {
-
 	template <class Stream>
 	void message(Stream & stream, const char* string)
 	{
