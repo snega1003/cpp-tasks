@@ -1,6 +1,6 @@
 src_merge = files(['main_task3.cc'])
 thread_dep = dependency('threads')
-executable('message',
+executable('task3',
     include_directories: src,
     sources: src_task3,
     dependencies: [],
@@ -8,7 +8,7 @@ executable('message',
 )
 
 src_numeration = files(['main_task8.cc'])
-executable('parallel_sort_merge',
+executable('task8',
     include_directories: src,
     sources: src_task8,
     dependencies: [thread_dep],
