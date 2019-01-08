@@ -2,7 +2,7 @@
 #define GROUP_HH
 #include <unordered_set>
 #include <string>
-#include "man.h"
+#include "project/man.hh"
 namespace my {
 
 	using my::Man;
@@ -27,6 +27,4 @@ namespace my {
 	};
 
 }
-
-
 #endif
