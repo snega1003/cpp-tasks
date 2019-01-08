@@ -1,5 +1,5 @@
 #include <iostream>
-#include "message.hh"
+#include "project/message.hh"
 
 int main()
 {
