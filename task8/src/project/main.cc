@@ -4,7 +4,7 @@
 #include <iomanip>
 #include <chrono>
 #include <cassert>
-#include "parallel_merge.h"
+#include "project/parallel_sort.hh"
 
 using namespace std;
 
