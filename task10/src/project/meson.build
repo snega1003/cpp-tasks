@@ -1,4 +1,4 @@
-myproject_src = files(['main.cc', 'rotate.cc'])
+myproject_src = files(['main.cc'])
 executable('project',
     include_directories: src,
     sources: myproject_src,
