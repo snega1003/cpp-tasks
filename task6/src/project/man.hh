@@ -22,6 +22,8 @@ namespace my {
 		int get_id() const {
 			return id;
 		}
+
+		bool operator==(Man const & other) {};
 	private:
 		string first_name;
 		string last_name;
