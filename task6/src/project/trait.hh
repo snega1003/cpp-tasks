@@ -1,8 +1,8 @@
 #ifndef SIZE_HH
 #define SIZE_HH
 
-#include "man.h"
-#include "group.h"
+#include "project/man.hh"
+#include "project/group.hh"
 
 namespace my{
 
