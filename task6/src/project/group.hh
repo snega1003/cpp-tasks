@@ -16,7 +16,7 @@ namespace my {
 		{
 			database.insert(person);
 		}
-		Group(string const & n) : first_name(n), id(group_key++) {};
+		Group(string const & n) : name(n), id(group_key++) {};
 
 
 	private:
