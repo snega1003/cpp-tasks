@@ -39,7 +39,7 @@ class line_number_buffer: public std::streambuf {
                 stream << std::setw(5)<< std::right << num++ << ".   ";
 		        str.replace(p, 1, std::string("\n") + stream.str());
 
-	    	    p =str.find("\n", p + 1);
+	    	    p = str.find("\n", p + 1);
 	        }
             return old->sputn(str.c_str(), str.size());
         }
