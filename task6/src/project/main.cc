@@ -7,7 +7,7 @@
 #include "man.h"
 #include <unordered_map>
 #include <unordered_set>
-#include "trait.h"
+#include "project/trait.hh"
 
 using namespace std;
 
