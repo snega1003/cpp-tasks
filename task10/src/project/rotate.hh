@@ -1,5 +1,5 @@
-#ifndef ROTATE_VEC_HH
-#define ROTATE_VEC_HH
+#ifndef ROTATE_HH
+#define ROTATE_HH
 
 #include <vector>
 
