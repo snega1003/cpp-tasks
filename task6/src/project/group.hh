@@ -2,7 +2,7 @@
 #define GROUP_HH
 #include <unordered_set>
 #include <string>
-#include "man.hh"
+#include "man.h"
 namespace my {
 
 	using my::Man;
@@ -14,16 +14,19 @@ namespace my {
 	public:
 		void add(Man const & person)
 		{
-			database.insert(person);
+			db.insert(person);
 		}
-		Group(string const & n) : name(n), id(group_key++) {};
-
+		Group(string const & n) : group_name(n), id(group_key++) {};
+		unordered_set<Man> data() const { return db; }
+		string name() const { return group_name; }
 
 	private:
 		string group_name;
 		int id;
-		unordered_map<Man> database;
+		unordered_set<Man> db;
 	};
 
 }
+
+
 #endif
