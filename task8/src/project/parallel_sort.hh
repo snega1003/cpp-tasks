@@ -32,29 +32,38 @@ namespace my
 		}
 		std::copy(res.begin(), res.end(), start);
 	}
-
+	
+	unsigned int num_threads = std::thread::hardware_concurrency();
+	unsigned int max_depth = floor(log(num_threads) / log(2));
 	template <class Iterator>
 	void mergeSortRecursive(Iterator start, Iterator end, int num) {
-		if (start + 1 >= end) return;
+		if (end - start > 1) {
 
-		size_t size = end - start;
-		Iterator middle = start + size / 2;
-		if (num > 1){
-			std::thread th1(mergeSortRecursive<Iterator>, start, middle, num - 2);
-			mergeSortRecursive<Iterator>(middle, end, num - 2);
-			th1.join();
+			auto middle = start + (end - start) / 2;
+
+			if (num < max_depth) {
+				std::thread t1 = std::thread(mergeSortRecursive<Iterator>, start, middle, num + 1);
+				std::thread t2 = std::thread(mergeSortRecursive<Iterator>, middle, end, num + 1);
+				t1.join();
+				t2.join();
+			}
+			else {
+				mergeSortRecursive(start, middle, num+1);
+				mergeSortRecursive(middle, end, num+1);
+			}
+			merge(start, middle, end);
 		}
-		else {
-			mergeSortRecursive(start, middle, 0);
-			mergeSortRecursive(middle, end, 0);
-		}
-		merge(start, middle, end);
+
 	}
+
+
 	template <class Iterator>
 	void mergeSort(Iterator start, Iterator end)
 	{
 		mergeSortRecursive(start, end, std::thread::hardware_concurrency());
 	}
+
+
 	template <class Iterator>
 	void mergeSortSeq(Iterator start, Iterator end)
 	{
