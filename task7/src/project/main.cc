@@ -1,16 +1,41 @@
 #include <iostream>
 #include <algorithm>
-#include <project/line_number_buffer.hh>
+#include "line_number_buffer.hh"
+#include <string>
+using namespace std;
 
-int main()
-{
-    auto oldbuf = std::cout.rdbuf();
+void cout_buf(string str) {
+	auto oldbuf = std::cout.rdbuf();
+	line_number_buffer buf{ oldbuf };
 
-    line_number_buffer buf{oldbuf};
-    std::cout.rdbuf(&buf);
+	ostream line_number_put(&buf);
+	cout << "Input: " << str << endl;
+	cout << "Output:\n";
+	line_number_put << str;
+	line_number_put.flush();
+} 
 
-    std::cout << std::cin.rdbuf() << std::endl;
+void cin_buff() {
+	auto oldbuf = std::cout.rdbuf();
+	line_number_buffer buf{ oldbuf };
 
-    std::cout.rdbuf(oldbuf);
-    return 0;
+	ostream line_number_put(&buf);
+	char c;
+	while ((c = getchar()) != EOF) {
+		line_number_put << c;
+		line_number_put.flush();
+	}
 }
+
+int main() {
+
+	string str = "Hello\nWorld!\nWhat a wonderful day!";
+	
+	cout_buf(str);
+	
+	cin_buff();
+
+	system("pause");
+	return 0;
+}
+
