@@ -4,7 +4,7 @@
 #include <iomanip>
 #include <chrono>
 #include <cassert>
-#include "project/parallel_sort.hh"
+#include "parallel_sort.hh"
 
 using namespace std;
 
@@ -37,10 +37,11 @@ int main()
 		cout << setw(10) << chrono::duration_cast<milli>(end_solo - start_solo).count()
 			<< "    " << setw(10) <<
 			chrono::duration_cast<milli>(end_parallel - start_parallel).count() <<
-			"      " << setw(10) << chrono::duration_cast<milli>(end_stdseq - start_stdseq).count() 
+			"      " << setw(10) << chrono::duration_cast<milli>(end_stdseq - start_stdseq).count()
 			<< endl;
 
 		assert(seq == parallel);
 	}
 	return 0;
 }
+
