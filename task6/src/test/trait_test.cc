@@ -9,16 +9,16 @@
 
 TEST(Traits, size)
 {
-    using namespace my;
-    
-    Man m("aaa", "bbb");
-    EXPECT_EQ(trait<Man>::size(m), 11);
+	using namespace my;
 
-    Group g("NAME");
-    g.add(m);
-    EXPECT_EQ(trait<Group>::size(g), 79);
+	Man m("bob", "bobich");
+	EXPECT_EQ(trait<Man>::size(m), 14);
 
-    std::cout << trait<Group>::size(g) << std::endl;    
-    g.add(Man("aaa", "bbb"));
-    EXPECT_EQ(trait<Group>::size(g), 90);
+	Group g("nameofgroup");
+	g.add(m);
+	EXPECT_EQ(trait<Group>::size(g), 55);
+
+	std::cout << trait<Group>::size(g) << std::endl;
+	g.add(Man("bob", "bobich"));
+	EXPECT_EQ(trait<Group>::size(g), 69);
 }
