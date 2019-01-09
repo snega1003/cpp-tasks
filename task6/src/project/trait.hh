@@ -1,8 +1,8 @@
 #ifndef SIZE_HH
 #define SIZE_HH
 
-#include "project/man.hh"
-#include "project/group.hh"
+#include "man.hh"
+#include "group.hh"
 
 namespace my{
 
@@ -25,7 +25,7 @@ namespace my{
 		typedef Group arg_type;
 		static res_type size(arg_type const & group)
 		{
-			size_t sum;
+			size_t sum = 0;
 			for (auto s : group.data())
 			{
 				sum += trait<Man>::size(s);
