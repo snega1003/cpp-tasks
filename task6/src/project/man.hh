@@ -23,7 +23,13 @@ namespace my {
 			return id;
 		}
 
-		bool operator==(Man const & other) {};
+		bool operator==(const Man & other) const
+		{
+			return (id == other.id
+				&& first_name == other.first_name
+				&& last_name == other.last_name);
+		}
+
 	private:
 		string first_name;
 		string last_name;
