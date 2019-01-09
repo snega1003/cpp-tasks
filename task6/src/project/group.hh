@@ -2,7 +2,7 @@
 #define GROUP_HH
 #include <unordered_set>
 #include <string>
-#include "project/man.hh"
+#include "man.hh"
 namespace my {
 
 	using my::Man;
