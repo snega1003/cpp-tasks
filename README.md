@@ -1,3 +1,3 @@
 # C++ Tasks
 
-For C++ course at AM-CP department of Saint-Petersburg state University.
+For C++ course at AM-CP faculty of Saint-Petersburg state University.
