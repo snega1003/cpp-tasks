@@ -37,7 +37,7 @@ meson test
 
 3. Вычислить покрытие кода тестами:
 ```
-# отмена предыдущей проверки   
+// отмена предыдущей проверки   
 meson configure -Db_sanitize=none -Dcpp_args=''   
 ninja coverage-text   
 ```
