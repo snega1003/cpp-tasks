@@ -4,13 +4,13 @@
 В состояние входят флаги форматирования (метод **flags**) и символ заполнения (метод **fill**). Проверьте его работоспособность на любом из стандартных потоков.    
 Пример использования:  
 ``` cpp
-    void print_hex(int i) {   
-      MyGuard g(std::cout);   
-      std::cout.setf(std::ios_base::hex, std::ios_base::basefield);   
-      // или std::cout << std::hex   
-      std::cout << i;   
-      // в деструкторе MyGuard флагу возвращается исходное значение   
-    }  
+void print_hex(int i) {   
+  MyGuard g(std::cout);   
+  std::cout.setf(std::ios_base::hex, std::ios_base::basefield);   
+  // или std::cout << std::hex   
+  std::cout << i;   
+  // в деструкторе MyGuard флагу возвращается исходное значение   
+}  
 ```
 
 2. Создайте класс для двухмерного массива. Определите для него поэлементные арифметические и логические операции. 
