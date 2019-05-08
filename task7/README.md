@@ -8,7 +8,7 @@
 
 $ cat -n < main.cc   
 1     ```cpp #include <iostream>  ```     
-2     ```cpp             ```     
+2    
 3     ```cpp int main() {   ```   
 4       ```cpp std::cout << "Hello world" << std::endl;   ```   
 5       ```cpp return 0;   ```   
