@@ -16,8 +16,8 @@
    + метод get_id,
    + метод swap.  
    
-Страницы руководства на русском (более старые):[clone(2)](https://www.opennet.ru/man.shtml?topic=clone&russian=0&category=2), 
-[waitpid(2)](https://www.opennet.ru/man.shtml?topic=waitpid&russian=0&category=2)
-[kill(2).](https://www.opennet.ru/man.shtml?topic=kill&russian=0&category=2).
+Страницы руководства на русском (более старые): [clone(2)](https://www.opennet.ru/man.shtml?topic=clone&russian=0&category=2), 
+[waitpid(2)](https://www.opennet.ru/man.shtml?topic=waitpid&russian=0&category=2), 
+[kill(2)](https://www.opennet.ru/man.shtml?topic=kill&russian=0&category=2).   
 Для принудительного завершения потока используйте сигнал **SIGTERM**. Список
 всех сигналов есть в руководстве [signal(7)](http://man7.org/linux/man-pages/man7/signal.7.html).
